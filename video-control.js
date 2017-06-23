@@ -1,7 +1,7 @@
 document.getElementById("video_player").src = "https://download.blender.org/durian/movies/Sintel.2010.720p.mkv";
 
 var overlay_header = document.querySelector('h1');
-overlay_header.textContent = "Video playing from Memory Node 2"
+overlay_header.textContent = "Welcome to my Video Player"
 
 function changeHeader()
 {
