@@ -1,4 +1,6 @@
-document.getElementById("video_player").src = "https://download.blender.org/durian/movies/Sintel.2010.720p.mkv";
+sentil_url = "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4"
+
+document.getElementById("video_player").src = sentil_url;
 
 var overlay_header = document.querySelector('h1');
 overlay_header.textContent = "Welcome to my Video Player"
@@ -21,6 +23,6 @@ function skipVideo()
 
 function loadSintel()
 {
-    document.getElementById("video_player").src = "https://download.blender.org/durian/movies/Sintel.2010.720p.mkv";
+    document.getElementById("video_player").src = sentil_url;
     
 }
