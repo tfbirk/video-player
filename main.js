@@ -7,6 +7,8 @@ const url = require('url')
 let win
 
 function createWindow () {
+    var argv = process.argv;
+
   // Create the browser window.
   win = new BrowserWindow({width: 1024, height: 768})
 
@@ -18,7 +20,10 @@ function createWindow () {
   }))
 
   // Open the DevTools.
-//  win.webContents.openDevTools()
+  if (argv.indexOf('debug') > -1)
+  {
+    win.webContents.openDevTools()
+  }
 
   // Emitted when the window is closed.
   win.on('closed', () => {

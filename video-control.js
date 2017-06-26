@@ -5,6 +5,20 @@ document.getElementById("video_player").src = sentil_url;
 var overlay_header = document.querySelector('h1');
 overlay_header.textContent = "Welcome to my Video Player"
 
+// set header based on command line
+const remote = require("electron").remote;
+var argv = require('electron').remote.process.argv;
+var pos_header_arg = argv.indexOf('header')
+if (pos_header_arg > 0)
+    {
+        text_index = pos_header_arg + 1;
+        if (text_index < argv.length)
+        {
+            var overlay_header = document.querySelector('h1');
+            overlay_header.textContent = argv[text_index];
+        }
+    }
+
 function changeHeader()
 {
     var overlay_header = document.querySelector('h1');
